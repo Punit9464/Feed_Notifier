@@ -88,7 +88,7 @@ router.post("/", async (req, res) => {
                             // .setImage(payload.thumbnail);
 
                         await webhook.send({
-                            content: `@everyone **${payload.broadcaster.username} is LIVE on KICK, Watch here: ${channelURL}**`
+                            content: `@everyone **${payload.broadcaster.username} is LIVE on KICK, Watch here:** ${channelURL}`
                         });
                     } finally {
                         webhook.destroy();
